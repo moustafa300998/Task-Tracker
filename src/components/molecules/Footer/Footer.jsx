@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>© 2023 Mostafa</p>
+      <p>© 2023 moustafa</p>
     </FooterContainer>
   );
 };
