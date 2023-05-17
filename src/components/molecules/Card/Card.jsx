@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "../../atoms/Link";
-import Button from "../../atoms/Button";
 import DestroyWindow from "../DestroyWindow";
 
 const StyledCard = styled.div`
@@ -45,14 +44,12 @@ const Card = ({ id = 1, name = "", description = "", createdAt = "" }) => {
         <CardText> {createdAt} </CardText>
           <Link href={`project/${id}/tasks`} color="purple" label="Task" />
           <Link href="#" color="gray" label="Edit" />
-          <Button onClick={() => setIsDestroyModalOpen(true)} color="red" label="Delete" />
-      {isDestroyModalObject && (
         <DestroyWindow
           isOpen={isDestroyModalObject}
           projectName={`project ${name}`}
           setIsOpen={setIsDestroyModalOpen}
         />
-      )}
+      
     </StyledCard>
   );
 };
