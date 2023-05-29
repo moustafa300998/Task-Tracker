@@ -6,6 +6,10 @@ import Button from '../atoms/Button/Button'
 
 const MainContent = styled.div`
   background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 `
 
 const ForButton = styled.div`
