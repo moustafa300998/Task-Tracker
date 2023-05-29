@@ -1,29 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
   width: 100%;
-  background-color: black;
+  background-color: #ccc;
   color: white;
   padding: 0.5rem 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 `;
 
-const Title = styled.div`
-  margin: 0;
+const LinkContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
+  gap: 10px;
+  color: white;
+`;
+
+const Title = styled.div`
+  font-size: 1.5rem;
+  color: #000;
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
       <Title>Task Tracker</Title>
+      <LinkContainer>
+        <Link to="/">home</Link>
+        <Link to="/projects">projects</Link>
+      </LinkContainer>
     </HeaderContainer>
   );
 };

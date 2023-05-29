@@ -8,10 +8,6 @@ const MyFact = styled.li`
 `;
 
 const MyList = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   padding: 20px;
 `;
 
@@ -22,12 +18,14 @@ const onClick = () => {
 const HomePage = () => {
   return (
     <DefaultTemplate>
-      <MyList>
-        <MyFact> I like food </MyFact>
-        <MyFact> I like football </MyFact>
-        <MyFact> I like anime </MyFact>
-      </MyList>
-      <Button onClick={onClick} label="hello"/>
+      <div>
+        <MyList>
+          <MyFact> I like food </MyFact>
+          <MyFact> I like football </MyFact>
+          <MyFact> I like anime </MyFact>
+        </MyList>
+        <Button onClick={onClick} label="hello"/>
+      </div>
     </DefaultTemplate>
   );
 };
